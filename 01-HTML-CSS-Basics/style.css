@@ -1,17 +1,73 @@
-#main_container{
-    margin-left: 25%;
-    width: 50%;
-    background-color: aqua;
-    border: 2px solid black;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+/* body{
+    background: url(/1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+
+} */
+
+
+h1{
+    background : linear-gradient(to right , rgb(184, 201, 30),rgba(30, 201, 59,0.3));
+    color: rgb(0, 8, 2);
 }
-.form{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    background-color: bisque;
-    border: 1px solid slateblue;
-    margin: 20px 10px;
+h1 + p {
+    color: black;
+}
+h2 + img{
+    width: 300px;
+    border: 2px solid red;
+}
+
+/* ul > li{
+    color: brown;
+} */
+
+li:first-child{
+    color: yellow;
+}
+
+/* ul :nth-child(3){
+    color: blue;
+} */
+li:last-child{
+    color: tomato;
+}
+
+form + button{
+    color: red;
+}
+
+a:link{
+    color: chartreuse;
+}
+a:visited{
+    color: red;
+}
+a:active{
+    background-color: aqua;
+}
+
+label + input,textarea{
+    border: 2px solid black;
+}
+
+table td{
+    border: 1px solid black;
+}
+
+h2[class|=article]{
+    background-color: green;
+}
+
+#linear-gradient{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to top right,rgb(18, 102, 236),rgba(52, 122, 235,0.3));
+}
+
+#radial-gradient{
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(red 20%,green 20%,blue 50%);
 }
