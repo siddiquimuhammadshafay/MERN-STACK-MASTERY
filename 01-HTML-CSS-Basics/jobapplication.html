@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <style>
+        input,select,textarea{
+            width: 50%;
+            height: 30px;
+            background-color: rgb(221, 210, 195);
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 4px;
+        }
+        button{
+            background-color: blue;
+            border: 2px solid black;
+            border-radius: 4px;
+            font-weight: bold;
+            float: right;
+            height: 30px;
+            padding: 50pxpx;
+            margin-bottom: 20px;
+            width: 30%;
+        }
+        input:focus{
+            outline-color: blueviolet ;
+        }
+        button:hover{
+            background-color: antiquewhite;
+        }
+
+    </style>
+    <script>
+        function message(){
+            alert("Fomr Submitted")
+        }
+    </script>
+</head>
+<body>
+   
+    
+    <div style="width: 40%; border: 2px solid black; margin-left: 30%; background-color: rgb(243, 241, 238); border-radius: 10px;">
+         <h1 style="text-align: center; font-weight: bolder ; font-size: xx-large;">Job Application <span style="font-size: medium;"> (Web) </span></h1>
+        <form style="font-size: x-large; font-weight: bold; margin-left: 30px; display : flex; flex-direction: column; " >
+            <label for="firstname"> First Name</label>
+            <input type="text" name="firstname" placeholder="Enter Your First Name.." required><br>
+
+            <label for="lastname"> Last Name</label>
+            <input type="text" name="lastname" placeholder="Enter Your Last Name.." required><br>
+
+            
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Enter Your Email.." required><br>
+
+            
+            <label for="job"> Job Role</label>
+            <select name="jobrole" >
+                <option value="Select Job Role">Select Job Role</option>
+                <option value="Java Developer"> Java Developer</option>
+                <option value="Python Developer"> Python Developer</option>
+                <option value="Web Developer"> Web Developer</option>
+            </select><br>
+
+            <label for="address"> Adress</label>
+            <textarea name="textarea" placeholder="Write here..."></textarea> <br>
+
+
+            
+            <label for="city">City</label>
+            <input type="text" name="city" placeholder="Enter Your City Name.." required><br>
+
+            <label for="pincode">Pin Code</label>
+            <input type="number" name="pincode" placeholder="Enter Pin Code.." required><br>
+
+
+            <label for="DOB">DOB</label>
+            <input type="date" name="dob" placeholder="Enter Your Date of Birth.." required><br>
+
+
+            <label for="cv">Upload Your CV</label>
+            <input type="file" name="Upload your cv" required><br>
+
+            <button value="submit" onclick=message()> Apply</button>
+        </form>
+    </div>
+        
+
+    
+
+    
+</body>
+</html>
