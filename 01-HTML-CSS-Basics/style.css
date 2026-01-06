@@ -99,3 +99,52 @@ h2[class|=article] {
     width: 20px;
     height: 5%vh;
 }
+
+
+
+
+
+
+
+
+#grid-container{
+    border: 2px solid black;
+    margin: 10px;
+    width: 50%;    
+    height: 300px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+   
+    grid-template-areas: "header header header " "sidebar main main" "footer footer footer";
+    /* grid-template-rows: auto auto; */
+    /* grid-gap: 200px 100px; */
+    gap: 10px;
+    /* justify-content: space-around;
+    align-content: start; */
+
+
+}
+
+.header{
+    grid-area: header;
+    background-color: aqua;
+    border: 1px solid black;
+
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(16, 101, 230);
+    border: 1px solid black;
+}
+.main{
+    grid-area: main;
+    background-color: rgb(8, 24, 245);
+    border: 1px solid black;
+}
+
+.footer{
+    grid-area: footer;
+     background-color: rgb(99, 8, 245);
+    border: 1px solid black;
+}
