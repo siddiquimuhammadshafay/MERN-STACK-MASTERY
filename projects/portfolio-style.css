@@ -42,6 +42,7 @@ color: #a1a1aa;
 nav a {
   display: inline-block;
   color: #a1a1aa;
+  border: 1px ;
   margin-left: 15px;
   padding: 6px 10px;
   font-weight: 600;
@@ -49,8 +50,10 @@ nav a {
 }
 
 nav a:hover {
-  background: rgb(74, 136, 235);
+  color: white;
+  background: #3b82f6;
   text-decoration: underline;
+  border: 1px solid #0804ff;
   border-radius: 6px;
   /* transform: translateY(-5px); */
   transform: scale(1.1);
@@ -72,12 +75,9 @@ nav a:hover {
     "card-6 card-6 card-6 card-7"
     "card-6 card-6 card-6 card-7";
 }
-/* 
-#grid-container :hover{
-    transform: translateY(-5px);
-} */
+
 .cards{
-    background-color: #161b22;
+   
     border: 1px solid #27272a;
     color : #a1a1aa;
     border-radius: 20px;
@@ -104,6 +104,8 @@ nav a:hover {
 .cards:hover {
   transform: translateY(-10px) !important; /* Forcefully lift on hover */
   box-shadow: 0 20px 40px rgba(17, 105, 247, 0.4);
+  
+  border-color: #3b82f6;  
 }
 
 #card-1{
@@ -115,17 +117,12 @@ nav a:hover {
     flex-wrap: wrap;
     background: radial-gradient(circle at center, #212e42 0%, #0a0a0a 100%);
     box-shadow: 10px 10px 30px -10px rgba(17, 105, 247, 0.3);
-    object-fit: contain;
-   
-    /* padding: 40px; */
-   
+    object-fit: contain;   
 }
 
 #card-1 > div{
     flex: 1;
 }
-
-
 
 #card-1 > div > button {
   background-color: #1169f7;
@@ -137,22 +134,23 @@ nav a:hover {
   font-size: 100%;
   margin: 0 10px 2%;
   padding: 5px;
-  /* display: inline-block; */
   transition: all 2s ease
 }
 
 button:hover {
   background-color: rgb(74, 136, 235);
-  transform: scale(1.5);
+  text-decoration: underline;
+  transform: scale(1.1);
 }
+
+
+
+
 #card-2{
     grid-area :card-2;
     display: flex;
     flex-direction:row;
     justify-content: flex-start;
-
-    
-
 }
 #card-2 > img{
     width: 200px;
@@ -163,24 +161,89 @@ button:hover {
 
 }
 
-#card-3{
-    grid-area :card-3;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
+
+#card-3 {
+  grid-area :card-3;
+   background: radial-gradient(circle at center, #212e42 0%, #0a0a0a 100%);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
 }
 
-#card-3 > div >h2{
-    color: #1169f7;
+/* Number (+10) ko highlight karne ke liye */
+#card-3 h2 {
     text-align: center;
-    font-size:40px;
-    font-weight: bolder;
-    margin-bottom: 10px;
-    
+    font-size: 3rem; 
+    margin: 0;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6, #2dd4bf); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));
 }
-#card-4{
-    grid-area :card-4;
+
+#card-3 h3 {
+   font-size: 20px;
+    color: #a1a1aa; ;
+    font-weight: 500;
+    margin: 0;
 }
+
+
+#card-3:hover {
+    border-color: #3b82f6;
+    transform: scale(1.02);
+}
+
+
+#card-4 {
+  grid-area :card-4;
+     background: radial-gradient(circle at center, #212e42 0%, #0a0a0a 100%);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #333;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Status text ke sath green dot lagane ke liye */
+#card-4 h2 {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+#card-4 h2::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #00ff88; /* Bright Green */
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 10px #00ff88;
+    animation: blink 1.5s infinite;
+}
+
+#card-4 h3 {
+    font-size: 20px;
+    color: #a1a1aa; ;
+    font-weight: 500;
+    margin: 0;
+}
+#card-4:hover {
+    border-color: #00ff88;
+    transform: translateY(-3px);
+}
+
+
+
+
 #card-5{
     grid-area :card-5;
     box-sizing: border-box;
@@ -196,7 +259,11 @@ button:hover {
     padding-right: 20px;
     gap: 20px;
 }
-#card-5 img:hover { transform: scale(1.1); }
+#card-5 img:hover {
+   transform: scale(1.1);
+   }
+
+
 #card-6{
     grid-area: card-6;
     display: flex;
@@ -207,23 +274,55 @@ button:hover {
     
 
 }
-#card-7{
+
+#card-7 {
     grid-area: card-7;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly; 
     align-items: center;
-    flex-wrap: wrap;
-     font-size: 20px;
-    font-weight: 800;
+    background: radial-gradient(circle at center, #212e42 0%, #0a0a0a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px; 
+    transition: all 0.3s ease;
+    min-height: 200px;
 }
 
-/* #card-7 > div > a > img{
-  padding-right: 20px;
-  padding-left: 40px;
-} */
+
+#card-7 h2 {
+    font-size: 28px; 
+    color: #a1a1aa; 
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 1px;
+}
 
 
+#card-7 div:last-child {
+    display: flex;
+    gap: 40px; 
+    align-items: center;
+}
+
+
+#card-7 img {
+    width: 65px; 
+    height: auto;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+#card-7 a:hover img {
+    transform: scale(1.25); 
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.6));
+}
+
+
+#card-7:hover {
+    border-color: #3b82f6 !important; 
+    box-shadow: 0 20px 40px rgba(17, 105, 247, 0.4); 
+}
 
 
 @media (max-width: 1024px) {
@@ -277,4 +376,10 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
 }
